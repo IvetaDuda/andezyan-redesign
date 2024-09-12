@@ -1,0 +1,19 @@
+@import '../../../app/variables';
+
+.btn {
+  border-radius: 16px;
+  padding: 16px 36px;
+  width: 226px;
+  height: 54px;
+  background-color: var(--second-color);
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: var(--main-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}

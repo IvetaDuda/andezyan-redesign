@@ -1,0 +1,145 @@
+:root {
+  --main-bg-color: #161616;
+  --second-bg-color: #101010;
+  --main-color: #ffffff;
+  --second-color: #febb12;
+  --accent-color: #fe6912;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+main,
+section,
+article {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition-duration: 1s;
+}
+
+/* * {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  transition-duration: 1s;
+} */
+
+header,
+footer {
+  width: inherit;
+  max-width: inherit;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1213px;
+  /* padding: 0 16px; */
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(transparent, #ebfbfa, #020b11);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #020b11, rgba(192, 215, 244, 0.5));
+  border-radius: 8px;
+}
+
+.navLinkHover {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      animation: animate 0.5s linear forwards;
+    }
+  }
+}
+
+@keyframes animate {
+  to {
+    width: 100%;
+  }
+}
+
+.active {
+  &::after {
+    width: 100%;
+  }
+}

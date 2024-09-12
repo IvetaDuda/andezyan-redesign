@@ -1,0 +1,61 @@
+@import '../../app/variables';
+.heroContainer {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.5)),
+    url('/hero-bg.webp');
+  background-size: cover;
+  background-position: 50% 56%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 105px);
+
+  @media (min-width: $tablet) {
+    min-height: calc(100vh - 140px);
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.88px;
+  margin-bottom: 64px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    letter-spacing: 1.32px;
+  }
+  @media (min-width: $laptop) {
+    font-size: 24px;
+    letter-spacing: 1.32px;
+  }
+  @media (min-width: $desktop) {
+    font-size: 32px;
+    letter-spacing: 1.32px;
+  }
+}
+
+.selection {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.32px;
+  color: var(--second-color);
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+  }
+  @media (min-width: $laptop) {
+    font-size: 32px;
+  }
+  @media (min-width: $desktop) {
+    font-size: 48px;
+  }
+}
